@@ -1,0 +1,39 @@
+
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="10">
+  <div *ngFor="let brewery of breweries">
+  <agm-marker [latitude]="brewery.latitude" [longitude]="brewery.longitude"  [iconUrl]='icon'>
+    <agm-snazzy-info-window [maxWidth]="400"  [maxHeight]="400" [closeWhenOthersOpen]="true">
+      <ng-template>
+       <div>        {{brewery.name}}
+        <fa-icon [icon]="faBeer"></fa-icon>
+
+
+       </div>
+       
+       <div class="">
+         <a href="{{brewery.website_url}}" target="_blank">
+        <button class="w-100 " mat-raised-button color="primary">Website</button>
+         </a>
+         <a href="https://www.google.com/maps/place/{{brewery.street + ','+ brewery.city + ',' + brewery.state}}" target="_blank" >
+        <br>
+        <button class="w-100 p-0" mat-raised-button color="primary" style="padding-top: 10px">Directions</button>
+         </a>
+       </div>
+
+
+
+
+
+
+
+
+
+      </ng-template>
+    </agm-snazzy-info-window>
+  </agm-marker>
+</div>
+
+</agm-map>

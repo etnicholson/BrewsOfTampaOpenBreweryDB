@@ -1,0 +1,71 @@
+<form (ngSubmit)="addBrewery(f)"#f="ngForm">
+  <div class="main-container">
+<mat-form-field>
+    <input matInput placeholder="Brewery Name"
+    class="form-control"
+    ngModel 
+    required
+    name="name">
+</mat-form-field>
+
+
+<mat-form-field>
+  <input matInput placeholder="Website"
+  class="form-control"
+  ngModel 
+  required
+  url
+  name="website">
+  <mat-error *ngIf="f.invalid">Enter a valid Url</mat-error>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput placeholder="Address"
+  class="form-control"
+  ngModel 
+  required
+  name="address">
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput placeholder="BeerAdvocate link"
+  class="form-control"
+  ngModel
+  url
+  required
+  name="beerAdvocate">
+  <mat-error *ngIf="f.invalid">Enter a valid Url</mat-error>
+
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput placeholder="Untapped link"
+  class="form-control"
+  ngModel 
+  required
+  url
+  name="untapped">
+  <mat-error *ngIf="f.invalid">Enter a valid Url</mat-error>
+</mat-form-field>
+
+
+
+
+<input 
+     type="file"
+     ngModel
+     name="image"
+     class="form-control"
+     accept="image/*"
+     required
+     (change)="onFileChange($event)"
+     >
+
+     <button mat-raised-button color="primary" [disabled]="!f.valid">Submit</button>
+
+    </div>
+
+</form>
+
+
+<mat-error *ngIf="error != undefined">{{error}}</mat-error>

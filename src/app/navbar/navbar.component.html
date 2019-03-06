@@ -1,0 +1,41 @@
+<!-- Image and text -->
+
+<nav class="navbar navbar-light bg-warning">
+
+
+
+  <a class="navbar-brand" href="">
+    <img src="../../assets/beer.svg" width="30" height="30" class="d-inline-block " alt="">
+    BrewsOfTampa
+  </a>
+
+<div class="">
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+
+            
+
+
+
+                <button mat-menu-item>
+                <mat-icon>input</mat-icon>
+                <span >
+                  <a [routerLink]="['/register']">Register Brewery</a>
+      
+                </span>
+              </button>
+                
+          
+
+
+
+    </mat-menu>
+  </div>
+
+</nav>
+
+
+
+
