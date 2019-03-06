@@ -21,6 +21,7 @@ export class MapComponent implements OnInit {
   faBeer = faBeer;
   icon;
 
+
   baseUrl = environment.apiUrl + 'brewery/list/';
   uploadFolder = environment.uploadFolder;
   constructor(private http: HttpClient, private openDB: OpenDBService) { }
@@ -34,11 +35,9 @@ export class MapComponent implements OnInit {
       }
     };
 
-    this.openDB.getBreweries()
-    .subscribe((res: any ) => {
-      this.breweries = res;
-      console.log(this.breweries);
-  });
+     this.openDB.breweryChange.subscribe((res: Brewery[] ) => {
+       this.breweries = res;
+    });
 
 
   }
