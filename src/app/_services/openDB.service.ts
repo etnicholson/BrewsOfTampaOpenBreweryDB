@@ -51,56 +51,5 @@ constructor(private http: HttpClient) {
 
   }
 
-  /*
-  getClearwater() {
-    this.http.get('https://api.openbrewerydb.org/breweries?by_city=Clearwater').subscribe((res: any ) => {
-      this.breweries.push(...res); }, (error: any) => console.log(error),
-      () =>  this.getDunedin()
-    );
 
-  }
-
-  getDunedin() {
-    this.http.get('https://api.openbrewerydb.org/breweries?by_city=Dunedin').subscribe((res: any ) => {
-      this.breweries.push(...res); }, (error: any) => console.log(error),
-      () =>  this.getPalmHarbor()
-    );
-
-  }
-
-  getPalmHarbor() {
-    this.http.get('https://api.openbrewerydb.org/breweries?by_city=Palm Harbor').subscribe((res: any ) => {
-      this.breweries.push(...res); }, (error: any) => console.log(error),
-      () =>  this.getTrinity()
-    );
-
-  }
-
-
-
-  getTrinity() {
-    this.http.get('https://api.openbrewerydb.org/breweries?by_city=Trinity').subscribe((res: any ) => {
-      this.breweries.push(...res); }, (error: any) => console.log(error),
-      () =>  this.getLargo()
-    );
-
-  }
-
-  getLargo() {
-    this.http.get('https://api.openbrewerydb.org/breweries?by_city=Largo').subscribe((res: any ) => {
-      this.breweries.push(...res); }, (error: any) => console.log(error),
-      () =>  this.getTarpon()
-    );
-
-  }
-
-
-  getTarpon() {
-    this.http.get('https://api.openbrewerydb.org/breweries?by_city=Tarpon Springs').subscribe((res: any ) => {
-      this.breweries.push(...res); }, (error: any) => console.log(error),
-      () =>  this.breweryChange.next(this.breweries)
-    );
-
-  }
-  */
 }
